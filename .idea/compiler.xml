@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="springclouddemo.eureka.main" target="1.8" />
+      <module name="springclouddemo.eureka.test" target="1.8" />
+      <module name="springclouddemo.main" target="1.8" />
+      <module name="springclouddemo.order.main" target="1.8" />
+      <module name="springclouddemo.order.test" target="1.8" />
+      <module name="springclouddemo.test" target="1.8" />
+      <module name="springclouddemo.user.main" target="1.8" />
+      <module name="springclouddemo.user.test" target="1.8" />
+      <module name="springclouddemo.zuul.main" target="1.8" />
+      <module name="springclouddemo.zuul.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

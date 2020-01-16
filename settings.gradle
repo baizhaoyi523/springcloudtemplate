@@ -1,4 +1,4 @@
-rootProject.name = 'springclouddemo'
+rootProject.name = 'springcloudtemplate'
 include 'eureka'
 include 'zuul'
 include 'user'
