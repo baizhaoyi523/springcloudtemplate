@@ -1,0 +1,41 @@
+buildscript {
+    repositories {
+        maven { url "https://maven.aliyun.com/repository/central" }
+    }
+
+    dependencies {
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.6.RELEASE"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:2.2.2.RELEASE"
+    }
+}
+
+allprojects {
+    apply plugin: 'idea'
+    apply plugin: 'java'
+    apply plugin: 'io.spring.dependency-management'
+
+    group 'com.bzy'
+    version '1.0-SNAPSHOT'
+
+    repositories {
+        maven { url "https://maven.aliyun.com/repository/central" }
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.boot:spring-boot-dependencies:2.2.2.RELEASE"
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:Hoxton.RELEASE"
+        }
+    }
+}
+
+subprojects {
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    }
+}
+
+dependencies {
+}
