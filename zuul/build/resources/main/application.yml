@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: zuul
+
+server:
+  port: 8762
+
+eureka:
+  instance:
+    hostname: zuul
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+zuul:
+  routes:
+    users:                          # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
+      path: /users/**               # 想要映射到的路径
+      serviceId: users              # Eureka中的serviceId
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud: debug
