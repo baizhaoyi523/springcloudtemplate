@@ -6,13 +6,16 @@
 *.iws
 *.iml
 .idea
-*/build
-*/out
+
+# java
+**/build/
+**/out/
+*.log
 
 # OS
 .DS_Store
 
-*/generated
+**/generated
 
 # db
 *.db
