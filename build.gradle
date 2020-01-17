@@ -13,6 +13,7 @@ allprojects {
     apply plugin: 'idea'
     apply plugin: 'java'
     apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'org.springframework.boot'
 
     group 'com.bzy'
     version '1.0-SNAPSHOT'

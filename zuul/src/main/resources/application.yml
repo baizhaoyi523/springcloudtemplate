@@ -7,19 +7,23 @@ server:
 
 eureka:
   instance:
-    hostname: zuul
+    prefer-ip-address: true
   client:
     serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/
 
 zuul:
   routes:
-    users:                          # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
+    users:                         # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
       path: /user/**               # 想要映射到的路径
-      serviceId: users             # Eureka中的serviceId
+      serviceId: user              # Eureka中的serviceId
 
-logging:
-  level:
-    org:
-      springframework:
-        cloud: debug
+ribbon:
+  ReadTimeout: 20000               # 使用serviceId时，超时时间由ribbon决定
+  ConnectTimeout: 20000
+
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        cloud: debug

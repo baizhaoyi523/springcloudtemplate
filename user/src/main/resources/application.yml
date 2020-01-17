@@ -1,13 +1,12 @@
 spring:
   application:
-    name: users
+    name: user
 
 server:
   port: 8763
 
 eureka:
   instance:
-    hostname: users
     prefer-ip-address: true
   client:
     serviceUrl:
