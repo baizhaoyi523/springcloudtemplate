@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Collections;
 import java.util.Map;
 
 @RestController
@@ -18,7 +19,9 @@ public class AboutRestController {
     @GetMapping("about")
     public String about(@RequestHeader Map<String, String> headers,
                         HttpServletRequest request) {
-
+        Collections.list(request.getHeaderNames()).forEach(
+                s -> System.out.println(s + ": " + request.getHeader(s))
+        );
         return "This is user about";
     }
 
